@@ -21,7 +21,7 @@ const Home = () => {
   if (!loading && !error && products.length) {
     content = products.map((item) => <Card key={item?.id} item={item}></Card>);
   }
-  console.log(products.length, error)
+  console.log(products)
   return (
     <div>
       <div>
