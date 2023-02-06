@@ -2,8 +2,8 @@ import React from 'react';
 import { useProducts } from '../../context/ProductProvider';
 
 const Home = () => {
-    const products = useProducts()
-    console.log(products)
+    const {products, dispatch} = useProducts()
+    console.log(products, dispatch)
     return (
         <div>
             This is home
