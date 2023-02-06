@@ -3,6 +3,7 @@ import { actionTypes } from "./actionTypes"
 export const initialState = {
     loading: false,
     products: [],
+    cart: [],
     error: false
 }
 export const productReducer = (state, action) => {
@@ -28,6 +29,14 @@ export const productReducer = (state, action) => {
             loading: false,
             message: action.payload,
             error: true
+        }
+       }
+       case actionTypes.FETCHING_CART: {
+        return {
+            ...state,
+            loading: false,
+            cart: [...state.cart, action.payload],
+            error: false
         }
        }
        default:

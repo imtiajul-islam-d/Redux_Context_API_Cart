@@ -20,7 +20,6 @@ const ProductProvider = ({ children }) => {
         dispatch({ type: actionTypes.FETCHING_ERROR, payload: error.message });
       });
   }, []);
-
   const value = {
     products: state,
     dispatch,

@@ -40,6 +40,15 @@ const Nav = () => {
               Filtered
             </Link>
           </li>
+          <li className="flex">
+            <Link to="cart"
+              rel="noopener noreferrer"
+              href="#"
+              className="flex items-center px-4 dark:border-transparent"
+            >
+              Cart
+            </Link>
+          </li>
         </ul>
         <div className="items-center flex-shrink-0 hidden lg:flex">
           <button className="self-center px-8 py-3 rounded">Sign in</button>

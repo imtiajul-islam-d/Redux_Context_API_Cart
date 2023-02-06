@@ -1,3 +1,4 @@
+import Cart from "../../Pages/Cart/Cart";
 import Filtered from "../../Pages/Filtered/Filtered";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
             {
                 path: "/filtered",
                 element: <Filtered></Filtered>
+            },
+            {
+                path: "/cart",
+                element: <Cart></Cart>
             }
         ])
     }

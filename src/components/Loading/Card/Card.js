@@ -1,6 +1,12 @@
 import React from "react";
+import { useProducts } from "../../../context/ProductProvider";
+import { actionTypes } from "../../../state/ProductState/actionTypes";
 
 const Card = ({ item }) => {
+  const {dispatch} = useProducts()
+  const handleCart = (product) => {
+    dispatch({type: actionTypes.FETCHING_CART, payload: product})
+  }
   return (
     <a
       rel="noopener noreferrer"
@@ -22,6 +28,7 @@ const Card = ({ item }) => {
           item?.body
          }
         </p>
+        <button onClick={() => handleCart(item)} className="border px-3 py-2 hover:bg-blue-700 hover:text-white">Add to cart</button>
       </div>
     </a>
   );
