@@ -28,7 +28,7 @@ const Nav = () => {
               href="#"
               className="flex items-center px-4 dark:border-transparent dark:text-violet-400 dark:border-violet-400"
             >
-              Home
+              Home updated
             </Link>
           </li>
           <li className="flex">
